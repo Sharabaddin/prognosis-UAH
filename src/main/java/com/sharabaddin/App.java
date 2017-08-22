@@ -31,12 +31,12 @@ public class App {
     public static void main(String[] args)  throws IOException {
         System.setProperty("sun.java2d.cmm", "sun.java2d.cmm.kcms.KcmsServiceProvider");
         try {
-            //FileUtils.copyURLToFile(new URL("https://bank.gov.ua/files/genlicbank.pdf"), new File("genlicbank.pdf"));
+            FileUtils.copyURLToFile(new URL("https://bank.gov.ua/files/genlicbank.pdf"), new File("download_files/genlicbank.pdf"));
         } catch(Exception e) {
             System.out.println(e.getMessage());
         }
 
-        try (PDDocument document = PDDocument.load(new File("genlicbank.pdf"))) {
+        try (PDDocument document = PDDocument.load(new File("download_files/genlicbank.pdf"))) {
             PDFTextStripperByArea stripper = new PDFTextStripperByArea();
             stripper.setSortByPosition( true );
             Rectangle rect = new Rectangle( 10, 255, 700, 60 );

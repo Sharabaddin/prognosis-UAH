@@ -1,10 +1,5 @@
 package com.sharabaddin;
 
-/**
- * Hello world!
- *
- */
-
 import java.awt.Rectangle;
 import java.io.File;
 import java.io.IOException;
